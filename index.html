@@ -3,175 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PGABer</title>
+    <title>YouTuber's Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
-            color: #333;
         }
         header {
-            background-color: #0073e6;
+            background-color: #004080; /* น้ำเงินเข้ม */
             color: white;
-            padding: 15px 0;
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
+            padding: 1rem;
             text-align: center;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        main {
-            padding: 20px;
-        }
-        section {
-            background-color: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        form {
+        nav {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
+            background-color: #0059b3; /* น้ำเงิน */
         }
-        form label {
-            margin: 10px 0 5px;
-        }
-        form input, form textarea, form button {
-            padding: 10px;
-            margin: 5px 0 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        form button {
-            background-color: #0073e6;
+        nav a {
             color: white;
-            border: none;
-            cursor: pointer;
+            padding: 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
         }
-        form button:hover {
-            background-color: #005bb5;
+        nav a:hover {
+            background-color: #0073e6; /* น้ำเงินอ่อน */
         }
-        footer {
-            background-color: #0073e6;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
+        .container {
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .fade-in {
+            opacity: 1 !important;
+        }
+        .video {
+            margin-bottom: 2rem;
+        }
+        .video iframe {
             width: 100%;
-            bottom: 0;
+            max-width: 560px;
+            height: 315px;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">หน้าแรก</a></li>
-                <li><a href="#about">เกี่ยวกับเรา</a></li>
-                <li><a href="#products">ผลิตภัณฑ์และบริการ</a></li>
-                <li><a href="#news">ข่าวสาร</a></li>
-                <li><a href="#blog">บทความและทรัพยากร</a></li>
-                <li><a href="#contact">ติดต่อเรา</a></li>
-                <li><a href="#login">เข้าสู่ระบบ</a></li>
-            </ul>
-        </nav>
+        <h1>ช่องของฉัน</h1>
     </header>
-
-    <main>
-        <!-- หน้าแรก -->
-        <section id="home">
-            <h1>ยินดีต้อนรับสู่ PGABer</h1>
-            <p>ข้อมูลเกี่ยวกับบริษัทและผลิตภัณฑ์หรือบริการของเรา</p>
-        </section>
-
-        <!-- เกี่ยวกับเรา -->
-        <section id="about">
-            <h2>เกี่ยวกับเรา</h2>
-            <p>ข้อมูลเกี่ยวกับประวัติความเป็นมาและทีมงานของ PGABer</p>
-        </section>
-
-        <!-- ผลิตภัณฑ์และบริการ -->
-        <section id="products">
-            <h2>ผลิตภัณฑ์และบริการ</h2>
-            <p>รายละเอียดของผลิตภัณฑ์และบริการต่างๆ ที่เราเสนอ</p>
-        </section>
-
-        <!-- ข่าวสาร -->
-        <section id="news">
-            <h2>ข่าวสาร</h2>
-            <p>ข่าวสารและกิจกรรมล่าสุดของเรา</p>
-        </section>
-
-        <!-- บทความและทรัพยากร -->
-        <section id="blog">
-            <h2>บทความและทรัพยากร</h2>
-            <p>บทความที่มีประโยชน์และเอกสารดาวน์โหลด</p>
-        </section>
-
-        <!-- ติดต่อเรา -->
-        <section id="contact">
-            <h2>ติดต่อเรา</h2>
-            <form>
-                <label for="name">ชื่อ:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">อีเมล:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">ข้อความ:</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">ส่งข้อความ</button>
-            </form>
-        </section>
-
-        <!-- เข้าสู่ระบบ -->
-        <section id="login">
-            <h2>เข้าสู่ระบบ</h2>
-            <form>
-                <label for="username">ชื่อผู้ใช้:</label>
-                <input type="text" id="username" name="username" required>
-                
-                <label for="password">รหัสผ่าน:</label>
-                <input type="password" id="password" name="password" required>
-                
-                <button type="submit">เข้าสู่ระบบ</button>
-            </form>
-            <p>ยังไม่มีบัญชี? <a href="#signup">ลงทะเบียนที่นี่</a></p>
-        </section>
-
-        <!-- ลงทะเบียน -->
-        <section id="signup">
-            <h2>ลงทะเบียน</h2>
-            <form>
-                <label for="new-username">ชื่อผู้ใช้:</label>
-                <input type="text" id="new-username" name="new-username" required>
-                
-                <label for="new-email">อีเมล:</label>
-                <input type="email" id="new-email" name="new-email" required>
-                
-                <label for="new-password">รหัสผ่าน:</label>
-                <input type="password" id="new-password" name="new-password" required>
-                
-                <button type="submit">ลงทะเบียน</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 PGABer. All rights reserved.</p>
-    </footer>
+    <nav>
+        <a href="#home">หน้าแรก</a>
+        <a href="#videos">วิดีโอ</a>
+        <a href="#about">เกี่ยวกับ</a>
+        <a href="#contact">ติดต่อ</a>
+    </nav>
+    <div class="container" id="home">
+        <h2>ยินดีต้อนรับสู่ช่องของฉัน!</h2>
+        <p>ติดตามวิดีโอล่าสุดและข่าวสารต่าง ๆ ได้ที่นี่</p>
+    </div>
+    <div class="container" id="videos">
+        <h2>วิดีโอล่าสุด</h2>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/วิดีโอไอดี1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/วิดีโอไอดี2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <!-- เพิ่มวิดีโอเพิ่มเติมตามต้องการ -->
+    </div>
+    <div class="container" id="about">
+        <h2>เกี่ยวกับฉัน</h2>
+        <p>ฉันคือ YouTuber ที่ชื่นชอบการแบ่งปันเรื่องราวและความรู้ในหัวข้อต่าง ๆ</p>
+    </div>
+    <div class="container" id="contact">
+        <h2>ติดต่อ</h2>
+        <p>สามารถติดต่อฉันได้ที่ <a href="mailto:example@example.com">example@example.com</a></p>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const containers = document.querySelectorAll('.container');
+            containers.forEach(container => {
+                container.classList.add('fade-in');
+            });
+        });
+    </script>
 </body>
 </html>
